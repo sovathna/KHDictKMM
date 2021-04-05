@@ -1,0 +1,13 @@
+CREATE TABLE `dict` (
+`word` TEXT NOT NULL,
+`definition` TEXT NOT NULL,
+`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL
+);
+
+insertWord:
+INSERT INTO `dict`(`word`, `definition`)
+VALUES(?, ?);
+
+selectWordById:
+SELECT * FROM `dict`
+WHERE `id` = ?;
